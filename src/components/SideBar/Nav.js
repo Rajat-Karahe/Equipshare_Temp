@@ -17,6 +17,133 @@ class Nav extends Component {
             <p>Dashboard</p>
           </Link>
         </li>
+        <li className={this.isPathActive('/companies') || this.state.companyMenuOpen ? 'active' : null}>
+          <a onClick={() => this.setState({ companyMenuOpen: !this.state.companyMenuOpen })}
+            data-toggle="collapse">
+            <i className="pe-7s-plugin"></i>
+            <p>
+              Companies
+            <b className="caret"></b>
+            </p>
+          </a>
+          <Collapse in={this.state.companyMenuOpen}>
+            <div>
+              <ul className="nav">
+                <li className={this.isPathActive('/companies/rentalContractor') ? 'active' : null}>
+                  <Link to="/companies/rentalContractor">Rental Contractor</Link>
+                </li>
+                <li className={this.isPathActive('/companies/oemBanks') ? 'active' : null}>
+                  <Link to="/companies/oemBanks">OEM Banks</Link>
+                </li>
+                <li className={this.isPathActive('/companies/suppliers') ? 'active' : null}>
+                  <Link to="/companies/suppliers">Suppliers</Link>
+                </li>
+                <li className={this.isPathActive('/companies/mechanics') ? 'active' : null}>
+                  <Link to="/companies/mechanics">Mechanics</Link>
+                </li>
+              </ul>
+            </div>
+          </Collapse>
+        </li>
+        
+        <li className={this.isPathActive('/equipmentMaster') || this.state.equipmentMasterMenuOpen ? 'active' : null}>
+          <a onClick={() => this.setState({ equipmentMasterMenuOpen: !this.state.equipmentMasterMenuOpen })}
+            data-toggle="collapse">
+            <i className="pe-7s-plugin"></i>
+            <p>
+              Equipment Master
+            <b className="caret"></b>
+            </p>
+          </a>
+          <Collapse in={this.state.equipmentMasterMenuOpen}>
+            <div>
+              <ul className="nav">
+                <li className={this.isPathActive('/equipmentMaster/regular-tables') ? 'active' : null}>
+                  <Link to="/tables/regular-tables">Category</Link>
+                </li>
+                <li className={this.isPathActive('/equipmentmaster/extended-tables') ? 'active' : null}>
+                  <Link to="/tables/extended-tables">Subcategory</Link>
+                </li>
+                <li className={this.isPathActive('/equipmentMaster/react-bootstrap-table') ? 'active' : null}>
+                  <Link to="/tables/react-bootstrap-table">Equipment</Link>
+                </li>                
+              </ul>
+            </div>
+          </Collapse>
+        </li>
+
+        <li className={this.isPathActive('/ams') || this.state.amsMenuOpen ? 'active' : null}>
+          <a onClick={() => this.setState({ amsMenuOpen: !this.state.amsMenuOpen })}
+            data-toggle="collapse">
+            <i className="pe-7s-plugin"></i>
+            <p>
+              AMS
+            <b className="caret"></b>
+            </p>
+          </a>
+          <Collapse in={this.state.amsMenuOpen}>
+            <div>
+              <ul className="nav">
+                <li className={this.isPathActive('/ams/activateClient') ? 'active' : null}>
+                  <Link to="/ams/activateClient">Activate Client</Link>
+                </li>
+                <li className={this.isPathActive('/ams/mapView') ? 'active' : null}>
+                  <Link to="/ams/mapView">Map View</Link>
+                </li>
+              </ul>
+            </div>
+          </Collapse>
+        </li>
+
+        <li className={this.isPathActive('/rental') || this.state.rentalMenuOpen ? 'active' : null}>
+          <a onClick={() => this.setState({ rentalMenuOpen: !this.state.rentalMenuOpen })}
+            data-toggle="collapse">
+            <i className="pe-7s-plugin"></i>
+            <p>
+              Rental
+            <b className="caret"></b>
+            </p>
+          </a>
+          <Collapse in={this.state.rentalMenuOpen}>
+            <div>
+              <ul className="nav">
+                <li className={this.isPathActive('/rental/viewRequest') ? 'active' : null}>
+                  <Link to="/rental/viewRequest">View Request</Link>
+                </li>
+                <li className={this.isPathActive('/rental/viewConfirmation') ? 'active' : null}>
+                  <Link to="/rental/viewConfirmation">View Confirmation</Link>
+                </li>
+              </ul>
+            </div>
+          </Collapse>
+        </li>
+
+        <li className={this.isPathActive('/auction') || this.state.auctionMenuOpen ? 'active' : null}>
+          <a onClick={() => this.setState({ auctionMenuOpen: !this.state.auctionMenuOpen })}
+            data-toggle="collapse">
+            <i className="pe-7s-plugin"></i>
+            <p>
+              Auction
+            <b className="caret"></b>
+            </p>
+          </a>
+          <Collapse in={this.state.auctionMenuOpen}>
+            <div>
+              <ul className="nav">
+                <li className={this.isPathActive('/auction/create') ? 'active' : null}>
+                  <Link to="/auction/create">Create</Link>
+                </li>
+                <li className={this.isPathActive('/auction/results') ? 'active' : null}>
+                  <Link to="/auction/results">Results</Link>
+                </li>
+                <li className={this.isPathActive('/auction/defaulters') ? 'active' : null}>
+                  <Link to="/auction/defaulters">Defaulters</Link>
+                </li>
+              </ul>
+            </div>
+          </Collapse>
+        </li>
+
         <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ componentMenuOpen: !this.state.componentMenuOpen })}
             data-toggle="collapse">
@@ -54,6 +181,7 @@ class Nav extends Component {
             </div>
           </Collapse>
         </li>
+
         <li className={this.isPathActive('/forms') || this.state.formMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ formMenuOpen: !this.state.formMenuOpen })} data-toggle="collapse">
             <i className="pe-7s-note2"></i>
@@ -75,6 +203,7 @@ class Nav extends Component {
             </div>
           </Collapse>
         </li>
+        
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ tableMenuOpen: !this.state.tableMenuOpen })} data-toggle="collapse">
             <i className="pe-7s-news-paper"></i>
@@ -96,6 +225,7 @@ class Nav extends Component {
             </div>
           </Collapse>
         </li>
+
         <li className={this.isPathActive('/maps') || this.state.mapMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ mapMenuOpen: !this.state.mapMenuOpen })} data-toggle="collapse">
             <i className="pe-7s-map-marker"></i>
