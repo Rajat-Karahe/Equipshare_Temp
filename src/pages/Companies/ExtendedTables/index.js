@@ -34,7 +34,7 @@ class ReactBootstrapTable extends Component {
 				<div className="col-md-12">
 				<div className="card">
 				<div className="header">
-				<h4>View Company</h4>
+				<h4>Company List</h4>
 			</div>
 
 			<div className="content">
@@ -50,7 +50,7 @@ class ReactBootstrapTable extends Component {
 						isKey
 						width="50px"
 						dataSort>
-						Category Name & Logo
+						Company Name
 						</TableHeaderColumn>
 
 						<TableHeaderColumn
@@ -58,76 +58,36 @@ class ReactBootstrapTable extends Component {
 						width="15%"
 						filter={ { type: 'TextFilter'} }
 						dataSort>
-						Subcategory
+						Projects
 						</TableHeaderColumn>
 
 						<TableHeaderColumn
 						dataField='country'
 						width="15%"
 						dataSort>
-						Equipments	
+						Users	
 						</TableHeaderColumn>
 
 						<TableHeaderColumn
 						dataField='salary'
 						width="15%"
 						dataSort>
-						Popular
+						Role
 						</TableHeaderColumn>
 
 						<TableHeaderColumn
 						dataField='job'
 						width="15%">
-						Brand
+						Type
 						</TableHeaderColumn>
 
-						<TableHeaderColumn width="5%"></TableHeaderColumn>
-					</BootstrapTable>
+						<TableHeaderColumn
+						dataField='job'
+						width="15%">
+						Equipments
+						</TableHeaderColumn>
 
-					<BootstrapTable
-					data={data}
-					bordered={false}
-					striped
-					pagination={true}
-					options={options}>
-
-							<TableHeaderColumn
-							dataField='id'
-							isKey
-							width="50px"
-							dataSort>
-							Subcategory
-							</TableHeaderColumn>
-
-							<TableHeaderColumn
-							dataField='name'
-							width="15%"
-							filter={ { type: 'TextFilter'} }
-							dataSort>
-							Equipments
-							</TableHeaderColumn>
-
-							<TableHeaderColumn
-							dataField='country'
-							width="15%"
-							dataSort>
-							Popular
-							</TableHeaderColumn>
-
-							<TableHeaderColumn
-							dataField='salary'
-							width="15%"
-							dataSort>
-							Brands
-							</TableHeaderColumn>
-
-							<TableHeaderColumn
-							dataField='job'
-							width="15%">
-							Logo of Brands
-							</TableHeaderColumn>
-
-							<TableHeaderColumn width="5%"></TableHeaderColumn>
+						<TableHeaderColumn width="1%"></TableHeaderColumn>
 					</BootstrapTable>
 				</div>
 				</div>
@@ -138,6 +98,4 @@ class ReactBootstrapTable extends Component {
 			);
 		}
 	}
-
-
 	export default ReactBootstrapTable

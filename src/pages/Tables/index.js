@@ -4,6 +4,7 @@ import RegularTables from './RegularTables';
 import ExtendedTables from './ExtendedTables';
 import ReactBootstrapTable from './ReactBootstrapTable';
 
+
 const Tables = ({match}) => (
   <div className="content">
     <Route path={`${match.url}/regular-tables`} component={RegularTables} />

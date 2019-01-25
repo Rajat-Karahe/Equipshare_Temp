@@ -53,14 +53,13 @@ class Nav extends Component {
             <div>
               <ul className="nav">
                 <li className={this.isPathActive('/equipmentMaster/regular-tables') ? 'active' : null}>
-                  <Link to="/tables/regular-tables">Category</Link>
+                  <Link to="/tables/regular-tables">Category And Subcategory</Link>
                 </li>
-                <li className={this.isPathActive('/equipmentmaster/extended-tables') ? 'active' : null}>
-                  <Link to="/tables/extended-tables">Subcategory</Link>
-                </li>
+                
                 <li className={this.isPathActive('/equipmentMaster/react-bootstrap-table') ? 'active' : null}>
                   <Link to="/tables/react-bootstrap-table">Equipment</Link>
                 </li>
+
               </ul>
             </div>
           </Collapse>

@@ -34,7 +34,7 @@ class ReactBootstrapTable extends Component {
 				<div className="col-md-12">
 				<div className="card">
 				<div className="header">
-				<h4>View Company</h4>
+				<h4>Equipments</h4>
 			</div>
 
 			<div className="content">
@@ -138,6 +138,4 @@ class ReactBootstrapTable extends Component {
 			);
 		}
 	}
-
-
 	export default ReactBootstrapTable

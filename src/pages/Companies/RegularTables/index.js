@@ -138,6 +138,4 @@ class ReactBootstrapTable extends Component {
 			);
 		}
 	}
-
-
 	export default ReactBootstrapTable
