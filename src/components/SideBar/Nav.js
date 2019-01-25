@@ -29,23 +29,17 @@ class Nav extends Component {
           <Collapse in={this.state.companyMenuOpen}>
             <div>
               <ul className="nav">
-                <li className={this.isPathActive('/companies/rentalContractor') ? 'active' : null}>
-                  <Link to="/companies/rentalContractor">Rental Contractor</Link>
+                <li className={this.isPathActive('/companies/viewCompany') ? 'active' : null}>
+                  <Link to="/companies/viewCompany">View Company</Link>
                 </li>
-                <li className={this.isPathActive('/companies/oemBanks') ? 'active' : null}>
-                  <Link to="/companies/oemBanks">OEM Banks</Link>
-                </li>
-                <li className={this.isPathActive('/companies/suppliers') ? 'active' : null}>
-                  <Link to="/companies/suppliers">Suppliers</Link>
-                </li>
-                <li className={this.isPathActive('/companies/mechanics') ? 'active' : null}>
-                  <Link to="/companies/mechanics">Mechanics</Link>
+                <li className={this.isPathActive('/companies/addCompany') ? 'active' : null}>
+                  <Link to="/companies/addCompany">Add Company</Link>
                 </li>
               </ul>
             </div>
           </Collapse>
         </li>
-        
+
         <li className={this.isPathActive('/equipmentMaster') || this.state.equipmentMasterMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ equipmentMasterMenuOpen: !this.state.equipmentMasterMenuOpen })}
             data-toggle="collapse">
@@ -66,7 +60,7 @@ class Nav extends Component {
                 </li>
                 <li className={this.isPathActive('/equipmentMaster/react-bootstrap-table') ? 'active' : null}>
                   <Link to="/tables/react-bootstrap-table">Equipment</Link>
-                </li>                
+                </li>
               </ul>
             </div>
           </Collapse>
@@ -203,7 +197,7 @@ class Nav extends Component {
             </div>
           </Collapse>
         </li>
-        
+
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ tableMenuOpen: !this.state.tableMenuOpen })} data-toggle="collapse">
             <i className="pe-7s-news-paper"></i>
