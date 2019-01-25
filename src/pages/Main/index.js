@@ -14,6 +14,7 @@ import MobileMenu from '../../components/MobileMenu';
  * Pages
  */
 import Dashboard from '../Dashboard';
+import Companies from '../Companies';
 import Components from '../Components';
 import UserProfile from '../UserProfile';
 import MapsPage from '../MapsPage';
@@ -43,6 +44,8 @@ const Main = ({
         <div className="main-panel">
           <Header />
           <Route exact path="/" component={Dashboard} />
+
+          <Route path="/companies" component={Companies} />
           <Route path="/components" component={Components} />
           <Route path="/profile" component={UserProfile} />
           <Route path="/forms" component={Forms} />
